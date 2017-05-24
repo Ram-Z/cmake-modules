@@ -1,3 +1,12 @@
+# Catch
+# -----
+#
+# ::
+#
+#   get_catch(VERSION <version>)
+#
+# Download Catch and provide a target "Catch::Catch".
+#
 function(get_catch)
   set(_prefix "_arg")
   set(_options "")

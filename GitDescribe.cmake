@@ -7,7 +7,8 @@
 #     [GIT_EXECUTABLE </path/to/git>]
 #     )
 #
-# Get the version string from `git describe`, expects there to be a tag of format "v?[0-9]*.[0-9]*"
+# Get the version string from `git describe`, expects there to be a
+# tag of format "v?[0-9]*.[0-9]*".
 #
 # It populates the following variables:
 #   <PREFIX>_VERSION_MAJOR:   major version of last tag
@@ -17,7 +18,8 @@
 #   <PREFIX>_VERSION_STRING:  <PREFIX>_VERSION_MAJOR.<PREFIX>_VERSION_MINOR-<PREFIX>_VERSION_PATCH-g<PREFIX>_VERSION_HASH
 #   <PREFIX>_VERSION:         <PREFIX>_VERSION_MAJOR.<PREFIX>_VERSION_MINOR.<PREFIX>_VERSION_PATCH
 #
-# The <PREFIX>_VERSION is formatted in such a way it can be used as a VERSION for a `project()`
+# The <PREFIX>_VERSION is formatted in such a way it can be used as a
+# VERSION for a `project()`.
 #
 function(git_describe)
   set(_prefix "_arg")

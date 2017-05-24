@@ -1,3 +1,12 @@
+# Trompeloeil
+# -----
+#
+# ::
+#
+#   get_trompeloeil(VERSION <version>)
+#
+# Download Trompeloeil and provide a target "Trompeloeil::Trompeloeil".
+#
 function(get_trompeloeil)
   set(_prefix "_arg")
   set(_options "")
