@@ -63,3 +63,19 @@ function(get_catch)
 
   add_library(Catch::Catch ALIAS Catch)
 endfunction()
+
+function(add_test_executable target)
+  if(NOT BUILD_TESTING)
+    return()
+  endif()
+
+  add_executable(${ARGV})
+  add_custom_target(check_${target}
+    COMMAND ${target}
+  )
+
+  if(NOT TARGET check)
+    add_custom_target(check)
+  endif()
+  add_dependencies(check check_${target})
+endfunction()
