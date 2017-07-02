@@ -52,7 +52,8 @@ function(git_describe)
   )
 
   if(NOT _git_result EQUAL 0)
-    message(FATAL_ERROR "Error running git: ${_git_error}")
+    message(WARNING "Error running git: ${_git_error}\nVersion not set")
+    return()
   endif()
 
   if(_git_long MATCHES "^v?(0|[1-9][0-9]*)\.(0|[1-9][0-9]*)-([0-9]+)-g([0-9a-f]*)$")
