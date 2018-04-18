@@ -29,7 +29,7 @@ function(get_catch)
   endif()
 
   set(_host "https://raw.githubusercontent.com")
-  set(_repo "philsquared/Catch")
+  set(_repo "catchorg/Catch2")
   set(_file_path "single_include/catch.hpp")
   set(_url "${_host}/${_repo}/${_version}/${_file_path}")
 
