@@ -52,7 +52,7 @@ function(git_describe)
   )
 
   if(NOT _git_result EQUAL 0)
-    message(WARNING "Error running git: ${_git_error}\nVersion not set")
+    message(WARNING "Could not get version from git:\n\t${_git_error}")
     return()
   endif()
 
